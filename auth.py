@@ -15,7 +15,7 @@ load_dotenv()
 
 # The secret key and algorithm are retrieved from .env and used to sign and verify JWT tokens with a specific algorithm to create the signatures
 Secret_key = os.getenv("Secret_Key")
-Algorithm = os.getenv("Algorithm")
+Algorithm = "HS256"
 
 # Bcrypt context is used to hash and verify user passwords
 bcrypt_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
